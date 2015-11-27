@@ -78,7 +78,7 @@ def generate_msg():
 	cnt = 0
 	print ("Start to put data into Redis at:", start_time)
 	now_time = time.time()
-	while now_time < (start_time + 1):
+	while now_time < (start_time + 10):
 		r.set(msg_key, msg_value)
 		cnt += 1
 		now_time = time.time()
